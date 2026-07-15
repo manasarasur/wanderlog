@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlog | Indian Travel Journal - Stories from the Road</title>
+    <!-- Yoast SEO simulated basic tags -->
+    <meta name="description" content="Quitting the desk to explore India's backroads. Detailed slow-travel journals from Gokarna's beaches, Hampi's ruins, and Munnar's mist-covered hills.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Wanderlog | India Travel Journals - Slow-Travel Logs">
+    <meta property="og:description" content="Discover India off the standard highway route. Camper logs, local food trails, packing lists, and train guides.">
+    <meta property="og:type" content="website">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="wp-admin-bar-active layout-right-sidebar palette-terracotta">
+
+    <!-- WordPress Admin Bar Simulation -->
+    <div id="wpadminbar">
+        <div class="quicklinks">
+            <ul class="ab-top-menu">
+                <li class="ab-item-node"><a class="ab-item" href="index.html"><span class="ab-icon">🌍</span><span class="ab-text" style="font-weight: 700; letter-spacing: 0.5px;">Wanderlog</span></a></li>
+                <li class="ab-item-node"><button class="ab-btn-simulate" id="wp-admin-customizer-btn"><span class="ab-icon">🎨</span><span class="ab-text">Astra Customizer</span></button></li>
+                <li class="ab-item-node"><button class="ab-btn-simulate" id="wp-admin-gutenberg-btn"><span class="ab-icon">🧱</span><span class="ab-text">Gutenberg Mode</span></button></li>
+                <li class="ab-item-node"><button class="ab-btn-simulate" id="wp-admin-cache-btn"><span class="ab-icon">⚡</span><span class="ab-text">Clear Cache</span></button></li>
+                <li class="ab-item-node"><button class="ab-btn-simulate" id="wp-admin-smush-btn"><span class="ab-icon">📸</span><span class="ab-text">Smush Stats</span></button></li>
+            </ul>
+        </div>
+        <div class="quicklinks-right">
+            <ul class="ab-top-menu">
+                <li class="ab-item-node"><button class="ab-btn-simulate" id="wp-admin-yoast-btn"><span class="ab-icon"><span class="yoast-badge-green"></span></span><span class="ab-text">Yoast SEO</span></button></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Astra Customizer Side Drawer (Left) -->
+    <div class="wp-side-drawer drawer-left" id="drawer-customizer">
+        <div class="drawer-header">
+            <div class="drawer-title">Astra Theme Settings</div>
+            <button class="drawer-close">✕</button>
+        </div>
+        <div class="drawer-content">
+            <div class="customizer-group">
+                <label class="customizer-label">Sidebar Layout</label>
+                <div class="customizer-options">
+                    <div class="layout-preset active" data-layout="right-sidebar">
+                        <span style="font-size: 1.25rem; display: block; margin-bottom: 5px;">📊</span>
+                        <div class="layout-preset-name">Right Sidebar</div>
+                    </div>
+                    <div class="layout-preset" data-layout="left-sidebar">
+                        <span style="font-size: 1.25rem; display: block; margin-bottom: 5px;">📊</span>
+                        <div class="layout-preset-name">Left Sidebar</div>
+                    </div>
+                    <div class="layout-preset" data-layout="no-sidebar">
+                        <span style="font-size: 1.25rem; display: block; margin-bottom: 5px;">🔳</span>
+                        <div class="layout-preset-name">Full Width</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="customizer-group">
+                <label class="customizer-label">Theme Color Preset</label>
+                <div class="color-palette-options">
+                    <button class="color-option-btn active" data-palette="terracotta">
+                        <div class="color-option-preview">
+                            <span class="color-swatch" style="background-color: #C1592A;"></span>
+                            <span class="color-swatch" style="background-color: #F2E8DC;"></span>
+                            <span class="color-swatch" style="background-color: #2B2B2B;"></span>
+                        </div>
+                        <div class="color-option-text">Terracotta Vibe</div>
+                    </button>
+                    <button class="color-option-btn" data-palette="olive">
+                        <div class="color-option-preview">
+                            <span class="color-swatch" style="background-color: #606C38;"></span>
+                            <span class="color-swatch" style="background-color: #DDA15E;"></span>
+                            <span class="color-swatch" style="background-color: #283618;"></span>
+                        </div>
+                        <div class="color-option-text">Mediterranean Olive</div>
+                    </button>
+                    <button class="color-option-btn" data-palette="mustard">
+                        <div class="color-option-preview">
+                            <span class="color-swatch" style="background-color: #D4A373;"></span>
+                            <span class="color-swatch" style="background-color: #E8F5E9;"></span>
+                            <span class="color-swatch" style="background-color: #4F5D2F;"></span>
+                        </div>
+                        <div class="color-option-text">Earthy Mustard</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yoast SEO Side Drawer (Right) -->
+    <div class="wp-side-drawer drawer-right" id="drawer-yoast">
+        <div class="drawer-header">
+            <div class="drawer-title">Yoast SEO - Page Analysis</div>
+            <button class="drawer-close">✕</button>
+        </div>
+        <div class="drawer-content">
+            <div style="text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 15px;">
+                <span class="yoast-badge-green" style="width: 20px; height: 20px; vertical-align: middle;"></span>
+                <span style="font-weight: 700; font-size: 1.1rem; margin-left: 8px; vertical-align: middle;">SEO Score: Good</span>
+            </div>
+            
+            <div class="customizer-group">
+                <label class="customizer-label">Focus Keyphrase</label>
+                <div style="font-weight: 600; padding: 6px 12px; background: var(--color-secondary); font-size: 0.9rem; border-radius: 4px;">Stories from the Road</div>
+            </div>
+
+            <div class="customizer-group">
+                <label class="customizer-label">Analysis Checklist</label>
+                <ul class="seo-checklist">
+                    <li class="seo-check-item">
+                        <span class="seo-status-dot green"></span>
+                        <div class="seo-check-text"><span>Focus Keyphrase in Title:</span> Found at start. Good!</div>
+                    </li>
+                    <li class="seo-check-item">
+                        <span class="seo-status-dot green"></span>
+                        <div class="seo-check-text"><span>SEO Title Width:</span> Title matches standards.</div>
+                    </li>
+                    <li class="seo-check-item">
+                        <span class="seo-status-dot green"></span>
+                        <div class="seo-check-text"><span>Meta description length:</span> Optimized meta tags found.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay"></div>
+
+    <!-- Astra Theme Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="site-logo">
+                <a href="index.html">
+                    <span style="font-size: 1.5rem;">🎒</span> Wander<span>log</span>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+            
+            <nav class="main-navigation" id="primary-menu">
+                <ul>
+                    <li class="current-page"><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tips.html">Travel Tips</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="site-main">
+        <!-- Hero Cover Block (Gutenberg styled) -->
+        <section class="hero wp-block-cover" data-block="Gutenberg Cover Block">
+            <div class="hero-bg"></div>
+            <!-- India-themed Varanasi sunrise hero image -->
+            <img class="hero-image lazy-image" src="assets/images/india_hero.png" alt="Sunrise over the Ghats of Varanasi, wooden boats on the golden water">
+            <div class="container hero-content">
+                <span class="hero-tagline">Indian Slow Travel</span>
+                <h1 class="hero-title">Stories from the Road</h1>
+                <p class="hero-description">Quitting the corporate desk to slow-travel the backroads of India. Welcome to Wanderlog—unfiltered camper diaries, heritage guides, and practical train itineraries.</p>
+                
+                <!-- Hero Search Bar (Functional redirect) -->
+                <form id="home-search-form" class="fade-in" style="display: flex; gap: 10px; max-width: 500px; margin-top: 1.5rem;">
+                    <input type="text" name="s" placeholder="Search stories (e.g., Munnar, Hampi)..." aria-label="Search posts input" style="flex-grow: 1; padding: 12px 20px; border-radius: 30px; border: none; outline: none; font-size: 0.95rem; font-family: var(--font-body); box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                    <button type="submit" class="button" style="padding: 12px 25px;"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Category Icon Strip (6 blocks) -->
+        <section class="wp-block-group fade-in" data-block="Gutenberg Group Block" style="padding: 3rem 0; background-color: var(--color-secondary);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem; font-style: italic;">Explore Travel Styles</h2>
+                <div class="category-icons-grid">
+                    
+                    <div class="category-icon-card" onclick="window.location.href='blog.html?s=munnar'">
+                        <div class="category-icon-wrapper">⛰️</div>
+                        <div class="category-icon-name">Hill Stations</div>
+                    </div>
+                    
+                    <div class="category-icon-card" onclick="window.location.href='blog.html?s=hampi'">
+                        <div class="category-icon-wrapper">🏯</div>
+                        <div class="category-icon-name">Heritage & Forts</div>
+                    </div>
+
+                    <div class="category-icon-card" onclick="window.location.href='blog.html?s=gokarna'">
+                        <div class="category-icon-wrapper">🏖️</div>
+                        <div class="category-icon-name">Beaches</div>
+                    </div>
+
+                    <div class="category-icon-card" onclick="window.location.href='blog.html?s=coorg'">
+                        <div class="category-icon-wrapper">🥾</div>
+                        <div class="category-icon-name">Backpacking</div>
+                    </div>
+
+                    <div class="category-icon-card" onclick="window.location.href='blog.html?s=delhi'">
+                        <div class="category-icon-wrapper">🍲</div>
+                        <div class="category-icon-name">Food Trails</div>
+                    </div>
+
+                    <div class="category-icon-card" onclick="window.location.href='blog.html?s=varanasi'">
+                        <div class="category-icon-wrapper">🪔</div>
+                        <div class="category-icon-name">Spiritual Journeys</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Astra Layout Wrapper -->
+        <div class="container" style="margin-top: 3rem;">
+            <div class="layout-wrapper">
+                
+                <!-- Primary content grid: 4 Latest Stories -->
+                <div class="primary-content wp-block-group" data-block="Gutenberg Group Block">
+                    <h2 class="post-section-title">Latest Web Journals</h2>
+                    
+                    <div class="posts-grid wp-block-columns" data-block="Gutenberg Columns Block (2 Cols)">
+                        
+                        <!-- Post Card 1: Gokarna -->
+                        <article class="post-card fade-in wp-block-post" data-block="Gutenberg Post Card Block">
+                            <div class="post-thumbnail-wrapper">
+                                <span class="post-category-tag">Beaches</span>
+                                <a href="post-gokarna.html">
+                                    <img class="post-thumbnail lazy-image" src="assets/images/india_gokarna.png" alt="Tropical palm trees overlooking Gokarna golden beach sand">
+                                </a>
+                            </div>
+                            <div class="post-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> July 10, 2026</span>
+                                    <span><i class="fa-regular fa-comment"></i> 6 comments</span>
+                                </div>
+                                <h3 class="post-card-title"><a href="post-gokarna.html">Losing Track of Time in Gokarna's Quiet Beaches</a></h3>
+                                <p class="post-excerpt">Gokarna, nestled along Karnataka's coastline, is often compared to its neighboring state Goa, but stepping past the tourist lanes reveals a quieter sanctuary. Read about hiking past cliffs to Half Moon Beach...</p>
+                                <a href="post-gokarna.html" class="read-more">Read Journal <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Post Card 2: Munnar -->
+                        <article class="post-card fade-in wp-block-post" data-block="Gutenberg Post Card Block">
+                            <div class="post-thumbnail-wrapper">
+                                <span class="post-category-tag">Hill Stations</span>
+                                <a href="post-munnar.html">
+                                    <img class="post-thumbnail lazy-image" src="assets/images/india_munnar.png" alt="Misty tea gardens of Munnar rolling green hills">
+                                </a>
+                            </div>
+                            <div class="post-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> July 05, 2026</span>
+                                    <span><i class="fa-regular fa-comment"></i> 14 comments</span>
+                                </div>
+                                <h3 class="post-card-title"><a href="post-munnar.html">Chasing Mist in the Tea Gardens of Munnar</a></h3>
+                                <p class="post-excerpt">High up in the Western Ghats of Kerala, Munnar's landscape shifts between deep green tea hills and columns of morning fog. Here is our slow itinerary to explore forest roads and view local estate histories...</p>
+                                <a href="post-munnar.html" class="read-more">Read Journal <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Post Card 3: Hampi -->
+                        <article class="post-card fade-in wp-block-post" data-block="Gutenberg Post Card Block">
+                            <div class="post-thumbnail-wrapper">
+                                <span class="post-category-tag">Heritage</span>
+                                <a href="post-hampi.html">
+                                    <img class="post-thumbnail lazy-image" src="assets/images/india_hampi.png" alt="Stone temple ruins in Hampi during sunset glow">
+                                </a>
+                            </div>
+                            <div class="post-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> June 26, 2026</span>
+                                    <span><i class="fa-regular fa-comment"></i> 9 comments</span>
+                                </div>
+                                <h3 class="post-card-title"><a href="post-hampi.html">A Slow Walk Through Hampi's Ruined Temples</a></h3>
+                                <p class="post-excerpt">Walking through Hampi's boulder-strewn valley is like turning the pages of an ancient script. In this article, we skip the rapid checklist tours to examine the stone arches and local Tungabhadra ferry rides...</p>
+                                <a href="post-hampi.html" class="read-more">Read Journal <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Post Card 4: Coorg -->
+                        <article class="post-card fade-in wp-block-post" data-block="Gutenberg Post Card Block">
+                            <div class="post-thumbnail-wrapper">
+                                <span class="post-category-tag">Backpacking</span>
+                                <a href="post-coorg.html">
+                                    <img class="post-thumbnail lazy-image" src="assets/images/gear.png" alt="Travel packing gear flat lay" style="filter: hue-rotate(240deg);">
+                                </a>
+                            </div>
+                            <div class="post-card-content">
+                                <div class="post-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> June 18, 2026</span>
+                                    <span><i class="fa-regular fa-comment"></i> 4 comments</span>
+                                </div>
+                                <h3 class="post-card-title"><a href="post-coorg.html">Monsoon Roads Through Coorg's Coffee Estates</a></h3>
+                                <p class="post-excerpt">When the southwest monsoon rolls over Coorg, Karnataka's coffee county wakes up. Discover our camper route navigating through winding roads, rain showers, and staying in homestead coffee yards...</p>
+                                <a href="post-coorg.html" class="read-more">Read Journal <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                        </article>
+                        
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="blog.html" class="button button-outline" style="border-radius: 4px;">View All Journal Entries</a>
+                    </div>
+                </div>
+
+                <!-- Secondary Sidebar (Astra theme widgets) -->
+                <aside class="secondary-sidebar">
+                    
+                    <!-- Bio Widget -->
+                    <div class="widget about-widget fade-in">
+                        <img class="lazy-image" src="assets/images/blogger.png" alt="Clara Vance overlooking gorge in Spain">
+                        <h3 class="widget-title">The Wanderer</h3>
+                        <p>Hello! I'm Clara Vance. In 2021, I quit my desk in Bangalore to travel the rural detours of India. This blog is my photo journal—sharing local communities, train routes, and ancient stone corridors.</p>
+                        <div class="about-widget-signature" style="font-size: 1.15rem;">Clara Vance</div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="widget widget-categories fade-in">
+                        <h3 class="widget-title">Explore Categories</h3>
+                        <ul>
+                            <li><a href="blog.html?s=munnar">Hill Stations</a> <span class="count">(12)</span></li>
+                            <li><a href="blog.html?s=hampi">Heritage & Forts</a> <span class="count">(20)</span></li>
+                            <li><a href="blog.html?s=gokarna">Beaches</a> <span class="count">(8)</span></li>
+                            <li><a href="blog.html?s=coorg">Backpacking</a> <span class="count">(15)</span></li>
+                            <li><a href="blog.html?s=delhi">Food Trails</a> <span class="count">(9)</span></li>
+                            <li><a href="blog.html?s=varanasi">Spiritual Journeys</a> <span class="count">(10)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="widget newsletter-widget fade-in">
+                        <h3 class="widget-title">Sunday Postcards</h3>
+                        <p>Subscribe to receive Sunday morning journals, offbeat train itineraries, and gear checklists direct to your inbox.</p>
+                        <form onsubmit="event.preventDefault(); alert('Subscribed to Wanderlog Indian Postcards!'); this.reset();">
+                            <input type="email" placeholder="Your email address" required aria-label="Newsletter input">
+                            <button type="submit" class="button">Subscribe</button>
+                        </form>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+
+        <!-- Popular Destinations Strip -->
+        <section class="wp-block-group fade-in" data-block="Gutenberg Group Block" style="margin-top: 4rem; padding: 4rem 0; background-color: var(--color-secondary);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem; font-style: italic;">Popular Indian Destinations</h2>
+                <p style="text-align: center; color: var(--color-text-light); max-width: 600px; margin: 0 auto 3rem;">Click below to browse specific travel guidelines and maps for these regions.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
+                    
+                    <div class="post-card" style="text-align: center; padding: 15px; border-radius: 8px;">
+                        <span style="font-size: 2.2rem; display: block; margin-bottom: 10px;">🪔</span>
+                        <h4 style="font-family: var(--font-heading); margin-bottom: 5px;">Varanasi</h4>
+                        <p style="font-size: 0.75rem; color: var(--color-text-light); margin-bottom: 15px;">Ghats, temples & sunrise boats.</p>
+                        <a href="dest-varanasi.html" class="read-more" style="justify-content: center; font-size: 0.8rem;">Explore <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="post-card" style="text-align: center; padding: 15px; border-radius: 8px;">
+                        <span style="font-size: 2.2rem; display: block; margin-bottom: 10px;">🏖️</span>
+                        <h4 style="font-family: var(--font-heading); margin-bottom: 5px;">Gokarna</h4>
+                        <p style="font-size: 0.75rem; color: var(--color-text-light); margin-bottom: 15px;">Beach hikes & cliff-side suns.</p>
+                        <a href="dest-gokarna.html" class="read-more" style="justify-content: center; font-size: 0.8rem;">Explore <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="post-card" style="text-align: center; padding: 15px; border-radius: 8px;">
+                        <span style="font-size: 2.2rem; display: block; margin-bottom: 10px;">⛰️</span>
+                        <h4 style="font-family: var(--font-heading); margin-bottom: 5px;">Munnar</h4>
+                        <p style="font-size: 0.75rem; color: var(--color-text-light); margin-bottom: 15px;">Misty valley roads & tea steps.</p>
+                        <a href="dest-munnar.html" class="read-more" style="justify-content: center; font-size: 0.8rem;">Explore <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="post-card" style="text-align: center; padding: 15px; border-radius: 8px;">
+                        <span style="font-size: 2.2rem; display: block; margin-bottom: 10px;">🏯</span>
+                        <h4 style="font-family: var(--font-heading); margin-bottom: 5px;">Hampi</h4>
+                        <p style="font-size: 0.75rem; color: var(--color-text-light); margin-bottom: 15px;">Ruins, temples & boulder cliffs.</p>
+                        <a href="dest-hampi.html" class="read-more" style="justify-content: center; font-size: 0.8rem;">Explore <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="post-card" style="text-align: center; padding: 15px; border-radius: 8px;">
+                        <span style="font-size: 2.2rem; display: block; margin-bottom: 10px;">🌲</span>
+                        <h4 style="font-family: var(--font-heading); margin-bottom: 5px;">Coorg</h4>
+                        <p style="font-size: 0.75rem; color: var(--color-text-light); margin-bottom: 15px;">Coffee farms & monsoon rains.</p>
+                        <a href="dest-coorg.html" class="read-more" style="justify-content: center; font-size: 0.8rem;">Explore <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                    <div class="post-card" style="text-align: center; padding: 15px; border-radius: 8px;">
+                        <span style="font-size: 2.2rem; display: block; margin-bottom: 10px;">🍲</span>
+                        <h4 style="font-family: var(--font-heading); margin-bottom: 5px;">Old Delhi</h4>
+                        <p style="font-size: 0.75rem; color: var(--color-text-light); margin-bottom: 15px;">Spices, alleys & historic bakes.</p>
+                        <a href="dest-delhi.html" class="read-more" style="justify-content: center; font-size: 0.8rem;">Explore <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid (Envira Lite simulation block) -->
+        <section class="wp-block-group container fade-in" style="padding: 4rem 0;" data-block="Gutenberg Group Block">
+            <h2 style="text-align: center; margin-bottom: 1rem; font-style: italic;">Postcards From The Road</h2>
+            <p style="text-align: center; color: var(--color-text-light); max-width: 600px; margin: 0 auto 3rem;">A visual timeline of rural tracks and river valleys. Click an image to view in lightbox.</p>
+            
+            <!-- Masonry mock photo grid -->
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img class="lazy-image" src="assets/images/india_hero.png" alt="Sunrise over the Ghats in Varanasi">
+                    <div class="gallery-caption">Sunrise Ghats, Varanasi</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img class="lazy-image" src="assets/images/india_gokarna.png" alt="Tropical beach cliffs in Gokarna">
+                    <div class="gallery-caption">Quiet Sands, Gokarna</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img class="lazy-image" src="assets/images/india_munnar.png" alt="Tea plantations landscape Munnar">
+                    <div class="gallery-caption">Tea Slopes, Munnar</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img class="lazy-image" src="assets/images/india_hampi.png" alt="Sunset light over boulders in Hampi">
+                    <div class="gallery-caption">Stone Corridors, Hampi</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img class="lazy-image" src="assets/images/gear.png" alt="Explorer essential gear spread flat lay">
+                    <div class="gallery-caption">Camp Gear Spread</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img class="lazy-image" src="assets/images/blogger.png" alt="Camper roadside portrait overlooking valley">
+                    <div class="gallery-caption">Roadside Break, Spain Gorge</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-widgets">
+                
+                <!-- Widget 1: Text -->
+                <div class="footer-widget text-widget">
+                    <h3 class="footer-widget-title">About Wanderlog</h3>
+                    <p class="footer-widget-text" style="margin-top: 15px;">Wanderlog is an independent travel publication dedicated to slow travel, cultural immersion, and mindful backpacking. We celebrate winding roads and raw local stories rather than tourist checklists.</p>
+                </div>
+
+                <!-- Widget 2: Navigation Links -->
+                <div class="footer-widget Links-widget">
+                    <h3 class="footer-widget-title">Browse Content</h3>
+                    <ul class="footer-links-list" style="margin-top: 15px;">
+                        <li><a href="blog.html">Web Journal</a></li>
+                        <li><a href="destinations.html">Destinations Map</a></li>
+                        <li><a href="about.html">About The Author</a></li>
+                        <li><a href="tips.html">Packing & Travel Tips</a></li>
+                        <li><a href="contact.html">Leave a Note</a></li>
+                    </ul>
+                </div>
+
+                <!-- Widget 3: Instagram Feed Mock -->
+                <div class="footer-widget instagram-widget">
+                    <h3 class="footer-widget-title">Instagram Feed</h3>
+                    <div class="instagram-grid" style="margin-top: 15px;">
+                        <a href="#" class="instagram-item">
+                            <img class="lazy-image" src="assets/images/india_hero.png" alt="Instagram Varanasi">
+                            <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                        <a href="#" class="instagram-item">
+                            <img class="lazy-image" src="assets/images/india_gokarna.png" alt="Instagram Gokarna">
+                            <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                        <a href="#" class="instagram-item">
+                            <img class="lazy-image" src="assets/images/india_munnar.png" alt="Instagram Munnar">
+                            <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                        <a href="#" class="instagram-item">
+                            <img class="lazy-image" src="assets/images/india_hampi.png" alt="Instagram Hampi">
+                            <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                        <a href="#" class="instagram-item">
+                            <img class="lazy-image" src="assets/images/blogger.png" alt="Instagram Blogger">
+                            <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                        <a href="#" class="instagram-item">
+                            <img class="lazy-image" src="assets/images/gear.png" alt="Instagram Gear">
+                            <div class="instagram-overlay"><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Widget 4: Newsletter block -->
+                <div class="footer-widget search-widget">
+                    <h3 class="footer-widget-title">Follow the Road</h3>
+                    <p class="footer-widget-text" style="margin-top: 15px; margin-bottom: 20px;">Join our community of 12,000+ subscriber explorers.</p>
+                    <div class="social-connect-icons">
+                        <a href="#" class="social-connect-icon-btn instagram" aria-label="Wanderlog Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-connect-icon-btn youtube" aria-label="Wanderlog YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-connect-icon-btn pinterest" aria-label="Wanderlog Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom panel -->
+            <div class="footer-bottom">
+                <span class="copyright-info">© 2026 Wanderlog Blog. Built using <a href="https://wpastra.com" target="_blank" style="color: inherit; text-decoration: underline;">Astra Theme</a> and Gutenberg Block Editor. All rights reserved.</span>
+                <div class="footer-bottom-social">
+                    <a href="#">Privacy Policy</a>
+                    <span style="margin: 0 5px;">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
