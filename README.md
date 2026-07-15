@@ -30,16 +30,6 @@ Wanderlog is an independent travel publication dedicated to slow travel, cultura
   - Smush — image compression
   - Envira Gallery Lite — photo gallery lightbox
 
-## Design
-
-| Element | Value |
-|---|---|
-| Primary color | `#C1592A` (Terracotta) |
-| Background | `#F2E8DC` (Sandy Beige) |
-| Text | `#2B2B2B` (Charcoal) |
-| Heading font | Playfair Display |
-| Body font | Inter |
-
 Fully responsive, mobile-first layout with lazy-loaded images and subtle scroll animations for fast performance.
 
 *Built as a personal project to explore WordPress theming, content structuring, and site deployment.*
